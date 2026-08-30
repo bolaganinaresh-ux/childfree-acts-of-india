@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Child Acts Worldwide | Every Child • Every Right • Every Country</title>
+<meta name="description" content="Child Acts Worldwide — multilingual child-rights information, country-specific legal starting points and practical next steps.">
+<style>
+:root{--blue:#1769e0;--navy:#102f62;--bg:#f5f8fc;--ink:#172033;--muted:#657085;--line:#e1e7f0;--soft:#eaf3ff}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+header{position:sticky;top:0;z-index:5;background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;padding:17px 6%;display:flex;justify-content:space-between;align-items:center;gap:15px;box-shadow:0 5px 20px #0002}.brand{font-weight:850;font-size:23px}.tag{font-size:12px;opacity:.88}header select{border:0;border-radius:9px;padding:9px}
+.hero{background:#fff;text-align:center;padding:62px 6% 48px}.hero h1{font-size:clamp(38px,6vw,68px);line-height:1.02;margin:0}.hero h1 span{color:var(--blue)}.hero p{max-width:850px;margin:17px auto;color:var(--muted);font-size:18px}
+.wrap{max-width:1120px;margin:auto;padding:0 18px 50px}.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;margin:20px 0;box-shadow:0 12px 35px #1020400d}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}@media(max-width:700px){.grid{grid-template-columns:1fr}}label{display:block;font-weight:750;margin-bottom:7px}select,input,textarea{width:100%;padding:12px;border:1px solid #d4dce9;border-radius:11px;font:inherit;color:var(--ink);background:#fff}textarea{min-height:135px;resize:vertical}
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}@media(max-width:850px){.cats{grid-template-columns:repeat(2,1fr)}}@media(max-width:470px){.cats{grid-template-columns:1fr}}button{font:inherit}.cat{padding:13px;border:1px solid var(--line);border-radius:13px;background:#fbfcff;text-align:left;font-weight:750;cursor:pointer}.cat:hover,.cat.active{background:var(--soft);border-color:#86b8ff}
+.primary{display:block;margin:20px auto 0;border:0;border-radius:12px;padding:13px 24px;background:var(--blue);color:#fff;font-weight:800;cursor:pointer}.primary:hover{filter:brightness(.92)}
+.info{display:none;background:#f8faff;border-left:4px solid var(--blue);padding:15px;border-radius:8px;margin-top:14px}.result{display:none}.steps{display:grid;grid-template-columns:repeat(6,1fr);gap:9px}@media(max-width:800px){.steps{grid-template-columns:repeat(3,1fr)}}@media(max-width:450px){.steps{grid-template-columns:repeat(2,1fr)}}.step{background:var(--soft);border-radius:10px;padding:12px;text-align:center;font-weight:750;font-size:13px}
+.law{margin:11px 0;padding:14px 16px;border-left:4px solid var(--blue);background:#f7faff;border-radius:8px}.law b{display:block}.law a{font-size:13px;color:#1454a0}.pill{display:inline-block;margin:3px;padding:5px 9px;border-radius:99px;background:var(--soft);color:#1454a0;font-size:12px;font-weight:750}.notice{background:#fff7df;border:1px solid #efd37d;border-radius:12px;padding:14px}.muted{color:var(--muted);font-size:14px}.countryBox{display:flex;align-items:center;gap:10px;padding:12px;background:#f7faff;border-radius:12px;margin-top:15px}
+footer{text-align:center;color:var(--muted);padding:30px 18px;font-size:13px}
+</style>
+</head>
+<body>
+<header><div><div class="brand">🌍 Child Acts Worldwide</div><div class="tag">Every Child • Every Right • Every Country</div></div>
+<select id="langTop"><option>English</option><option>తెలుగు</option><option>हिन्दी</option><option>Українська</option><option>العربية</option><option>Español</option><option>Français</option><option>中文</option><option>日本語</option><option>தமிழ்</option><option>ಕನ್ನಡ</option></select></header>
+<section class="hero"><h1>Every child.<br><span>Every right. Everywhere.</span></h1><p>Describe a child-related problem, choose a country and explore international child rights, national legal starting points and practical next steps.</p></section>
+<main class="wrap">
+<section class="card">
+<div class="grid">
+<div><label>🌐 Answer language</label><select id="lang"><option>English</option><option>తెలుగు</option><option>हिन्दी</option><option>Українська</option><option>العربية</option><option>Español</option><option>Français</option><option>中文</option><option>日本語</option><option>தமிழ்</option><option>ಕನ್ನಡ</option></select></div>
+<div><label>🌎 Country</label><select id="country"><option>India</option><option>Ukraine</option><option>United States</option><option>United Kingdom</option><option>Australia</option><option>Canada</option><option>Nepal</option><option>South Africa</option><option>Other country</option></select></div>
+<div><label>📍 State / Province / Region</label><input id="region" placeholder="Optional"></div>
+</div>
+<div class="countryBox">🌍 <b>International foundation:</b> UN Convention on the Rights of the Child (CRC)</div>
+<div style="margin-top:18px"><label>📝 Describe the problem</label><textarea id="problem" placeholder="Example: A 4-year-old child has a rare syndrome. What support, education and legal protections may be available?"></textarea></div>
+<h3>Choose a subject</h3>
+<div class="cats">
+<button class="cat" data-k="protection">👶 Child Protection</button><button class="cat" data-k="legal">⚖️ Legal Rights</button><button class="cat" data-k="health">🏥 Health & Disability</button><button class="cat" data-k="education">🎓 Education</button>
+<button class="cat" data-k="family">👨‍👩‍👧 Family</button><button class="cat" data-k="adoption">🏠 Adoption & Guardianship</button><button class="cat" data-k="emergency">🆘 Emergency / Help</button><button class="cat" data-k="laws">📚 Country Child Laws</button>
+<button class="cat" data-k="sources">🔗 Official Sources</button><button class="cat" data-k="roadmap">🧭 Help Roadmap</button></div>
+<div id="subjectInfo" class="info"></div><button class="primary" id="find">🔍 FIND HELP</button>
+</section>
+
+<section class="card result" id="result"><h2>🧭 Help Roadmap</h2><div id="summary"></div>
+<div class="steps"><div class="step">1. Problem</div><div class="step">2. Rights</div><div class="step">3. Law</div><div class="step">4. Documents</div><div class="step">5. Authority</div><div class="step">6. Next Action</div></div>
+<h3>🌍 International child-rights foundation</h3><div class="law"><b>UN Convention on the Rights of the Child</b><div>A global legal framework for children's rights. Childhood is treated as a special protected period and the Convention addresses protection, development, participation and dignity.</div><a target="_blank" href="https://www.unicef.org/child-rights-convention">UNICEF — Convention on the Rights of the Child ↗</a></div>
+<h3>📚 Country-specific legal starting point</h3><div id="laws"></div>
+<h3>📋 What should I do now?</h3><ol><li>Confirm the country and region.</li><li>Describe the child's age and relevant circumstances without unnecessary personal data.</li><li>Collect only documents actually required by the responsible authority.</li><li>Verify the current law and eligibility using an official source.</li><li>Contact the responsible child-protection, education, health, legal-aid or emergency authority.</li></ol>
+<div class="notice"><b>Important:</b> This is an educational prototype, not legal or medical advice. It does not diagnose conditions, decide legal eligibility or replace a lawyer or doctor. Laws and procedures change.</div>
+</section>
+
+<section class="card"><h2>🔎 Search the starter library</h2><input id="search" placeholder="Search child protection, education, disability, adoption, CRC..."><div id="directory"></div></section>
+</main>
+<footer>© 2026 Child Acts Worldwide • Original website content reserved. Government laws and official materials remain the property of their respective authorities.</footer>
+<script>
+const sources={India:"https://www.indiacode.nic.in/",Ukraine:"https://zakon.rada.gov.ua/laws/",UnitedStates:"https://www.usa.gov/",UnitedKingdom:"https://www.gov.uk/",Australia:"https://www.australia.gov.au/",Canada:"https://www.canada.ca/",Nepal:"https://www.nepal.gov.np/",SouthAfrica:"https://www.gov.za/"};
+const info={
+protection:["👶 Child Protection","Start with safety, protection from violence and exploitation, care, rehabilitation and the child's best interests."],
+legal:["⚖️ Legal Rights","National law differs by country. Identify the country and region before relying on a legal provision."],
+health:["🏥 Health & Disability","Health information is not diagnosis. Check healthcare, disability certification, rehabilitation, accessibility and social support."],
+education:["🎓 Education","Check compulsory education, inclusion, special support and school access in the selected country."],
+family:["👨‍👩‍👧 Family","Family matters may involve care, custody, maintenance, violence prevention and child welfare."],
+adoption:["🏠 Adoption & Guardianship","Adoption and guardianship are jurisdiction-specific and must follow the official legal process."],
+emergency:["🆘 Emergency / Help","If a child is in immediate danger, contact local emergency services or child-protection authorities immediately."],
+laws:["📚 Country Child Laws","The production system should retrieve current laws from the selected country's official legal database."],
+sources:["🔗 Official Sources","Use official government and legal sources for current law, procedures, forms and contacts."],
+roadmap:["🧭 Help Roadmap","Problem → Rights → Law → Documents → Authority → Next Action."]
+};
+function show(k){document.querySelectorAll(".cat").forEach(b=>b.classList.toggle("active",b.dataset.k===k));let d=info[k],c=document.getElementById("country").value,x=document.getElementById("subjectInfo");x.style.display="block";let u=sources[c]||"";x.innerHTML="<b>"+d[0]+"</b><p>"+d[1]+"</p>"+(u?"<a target='_blank' href='"+u+"'>Open official "+c+" government/legal portal ↗</a>":"");}
+document.querySelectorAll(".cat").forEach(b=>b.onclick=()=>show(b.dataset.k));
+const library=[
+["UN Convention on the Rights of the Child","International child-rights framework","Global","https://www.unicef.org/child-rights-convention"],
+["Child Protection","Country-specific child protection laws and services","Country",""],
+["Legal Rights","National and regional laws applicable to the reported facts","Country",""],
+["Health & Disability","Healthcare, disability, rehabilitation and accessibility frameworks","Country",""],
+["Education","Education rights, inclusion and support","Country",""],
+["Family","Family support, custody, maintenance and protection","Country",""],
+["Adoption & Guardianship","Adoption, guardianship and alternative-care frameworks","Country",""],
+["Emergency / Help","Emergency services and child-protection contacts","Country",""]];
+function render(q=""){let f=library.filter(x=>x.join(" ").toLowerCase().includes(q.toLowerCase()));document.getElementById("directory").innerHTML=f.map(x=>"<div class='law'><b>"+x[0]+"</b><div>"+x[1]+"</div><span class='pill'>"+x[2]+"</span>"+(x[3]?"<br><a target='_blank' href='"+x[3]+"'>Official source ↗</a>":"")+"</div>").join("")}
+render();document.getElementById("search").oninput=e=>render(e.target.value);
+document.getElementById("find").onclick=()=>{let p=document.getElementById("problem").value.trim();if(!p){alert("Please describe the problem first.");return}let c=document.getElementById("country").value,r=document.getElementById("region").value.trim(),u=sources[c]||"";document.getElementById("summary").innerHTML="<p><span class='pill'>Country: "+c+"</span>"+(r?" <span class='pill'>Region: "+r+"</span>":"")+"</p><p><b>Problem:</b> "+p.replace(/[<>&]/g,"")+"</p>";document.getElementById("laws").innerHTML="<div class='law'><b>"+c+" national framework</b><div>Identify and verify the laws that apply to the specific facts and region.</div>"+(u?"<a target='_blank' href='"+u+"'>Official "+c+" government/legal portal ↗</a>":"")+"</div><div class='law'><b>Practical support</b><div>Find the responsible child-protection, education, health, legal-aid or emergency authority for the selected jurisdiction.</div></div>";let z=document.getElementById("result");z.style.display="block";z.scrollIntoView({behavior:"smooth"})};
+document.getElementById("langTop").onchange=e=>document.getElementById("lang").value=e.target.value;document.getElementById("lang").onchange=e=>document.getElementById("langTop").value=e.target.value;
+</script></body></html>
